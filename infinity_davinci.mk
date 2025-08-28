@@ -13,9 +13,9 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, device/xiaomi/davinci/device.mk)
 
 # Inherit some common Lineage stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+$(call inherit-product, vendor/infinity/config/common_full_phone.mk)
 
-PRODUCT_NAME := lineage_davinci
+PRODUCT_NAME := infinity_davinci
 PRODUCT_DEVICE := davinci
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := Mi 9T
@@ -28,3 +28,9 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     SystemName=davinci
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
+
+#Infinity Stuff
+INFINITY_BUILD_TYPE := UNOFFICIAL
+INFINITY_MAINTAINER := "hursitwww"
+WITH_GAPPS := true
+ 
