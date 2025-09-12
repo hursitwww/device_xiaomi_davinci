@@ -24,4 +24,10 @@
 
     <!-- Location on the screen of the center of the fingerprint sensor. -->
     <dimen name="physical_fingerprint_sensor_center_screen_location_y">1900px</dimen>
+
+    <!-- Whether to disable Smart Pixels on UDFPS -->
+    <bool name="config_disableSmartPixelsOnUDFPS">true</bool>
+
+    <!-- Whether to disable Night Light feature during UDFPS unlock -->
+    <bool name="config_udfpsDisableNightLight">true</bool>
 </resources>
