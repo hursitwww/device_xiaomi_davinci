@@ -13,9 +13,10 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, device/xiaomi/davinci/device.mk)
 
 # Inherit some common Lineage stuff.
-$(call inherit-product, vendor/infinity/config/common_full_phone.mk)
+$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+TARGET_DISABLE_EPPE := true
 
-PRODUCT_NAME := infinity_davinci
+PRODUCT_NAME := lineage_davinci
 PRODUCT_DEVICE := davinci
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := Mi 9T
@@ -29,8 +30,18 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
-#Infinity Stuff
-INFINITY_BUILD_TYPE := UNOFFICIAL
-INFINITY_MAINTAINER := "hursitwww"
-WITH_GAPPS := true
-TARGET_HAS_UDFPS := true
+#Axion stuffs
+TARGET_ENABLE_BLUR := true
+HBM_SUPPORTED := true
+HBM_NODE := /sys/class/backlight/panel0-backlight/hbm_mode
+
+# Camera information (multiple sensors supported)
+AXION_CAMERA_REAR_INFO := 48,13,8
+AXION_CAMERA_FRONT_INFO := 20
+
+# Maintainer name (underscores become spaces in the UI)
+AXION_MAINTAINER := hursitwww
+
+# Processor name (underscores become spaces)
+AXION_PROCESSOR := Snapdragon_730
+
