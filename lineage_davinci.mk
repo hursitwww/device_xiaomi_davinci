@@ -35,6 +35,10 @@ TARGET_ENABLE_BLUR := true
 HBM_SUPPORTED := true
 HBM_NODE := /sys/class/backlight/panel0-backlight/hbm_mode
 
+PERF_GOV_SUPPORTED := true
+PERF_DEFAULT_GOV := schedutil
+PERF_ANIM_OVERRIDE := false
+
 # Camera information (multiple sensors supported)
 AXION_CAMERA_REAR_INFO := 48,13,8
 AXION_CAMERA_FRONT_INFO := 20
